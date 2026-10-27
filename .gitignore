@@ -35,3 +35,7 @@ crashlytics-build.properties
 # OS
 .DS_Store
 Thumbs.db
+
+# Claude Code / AI tooling
+.claude/
+.claude-flow/
