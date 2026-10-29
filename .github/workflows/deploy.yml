@@ -1,0 +1,56 @@
+# Deploy to itch.io
+
+name: Deploy
+
+# When : push to main branch
+on:
+  push:
+    branches: [main]
+
+env:
+  UNITY_PROJECT_PATH: thatgamejam2
+  # Build target
+  BUILD_TARGET: WebGL
+  # channel name
+  ITCH_CHANNEL: webgl
+
+jobs:
+  build-and-deploy:
+    name: Build & Upload to itch.io
+    runs-on: ubuntu-latest
+    steps:
+      # Get code form repo
+      - uses: actions/checkout@v4
+        with:
+          lfs: true
+
+      # Cache the library 
+      - uses: actions/cache@v4
+        with:
+          path: ${{ env.UNITY_PROJECT_PATH }}/Library
+          key: Library-${{ env.BUILD_TARGET }}-${{ hashFiles(format('{0}/Assets/**', env.UNITY_PROJECT_PATH), format('{0}/Packages/**', env.UNITY_PROJECT_PATH)) }}
+          restore-keys: Library-
+
+      # Unity Play test
+      - uses: game-ci/unity-builder@v4
+        env:
+          UNITY_LICENSE: ${{ secrets.UNITY_LICENSE }}
+          UNITY_EMAIL: ${{ secrets.UNITY_EMAIL }}
+          UNITY_PASSWORD: ${{ secrets.UNITY_PASSWORD }}
+        with:
+          projectPath: ${{ env.UNITY_PROJECT_PATH }}
+          targetPlatform: ${{ env.BUILD_TARGET }}
+
+      # Install butler
+      - name: Install butler
+        run: |
+          curl -L --retry 3 -o butler.zip https://broth.itch.zone/butler/linux-amd64/LATEST/archive/default
+          unzip -o butler.zip -d butler
+          chmod +x butler/butler
+
+      # Push build to itch.io
+      - name: Push build to itch.io
+        env:
+          BUTLER_API_KEY: ${{ secrets.ITCH_API_KEY }}
+        run: |
+          ./butler/butler push build/${{ env.BUILD_TARGET }} ${{ secrets.ITCH_GAME_ID }}:${{ env.ITCH_CHANNEL }}
