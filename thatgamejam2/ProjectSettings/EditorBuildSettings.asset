@@ -6,19 +6,19 @@ EditorBuildSettings:
   serializedVersion: 2
   m_Scenes:
   - enabled: 1
-    path: Assets/Scenes/Splash.unity
+    path: Assets/Scenes/Non_GameScene/Splash.unity
     guid: 8c9cfa26abfee488c85f1582747f6a02
   - enabled: 1
-    path: Assets/Scenes/MainMenu.unity
+    path: Assets/Scenes/Non_GameScene/MainMenu.unity
     guid: 4aa9cab5923eee34b811396db67b1d5e
   - enabled: 1
     path: Assets/Scenes/GameScene.unity
     guid: d1d1474357725b64db5269a5e269d0b8
   - enabled: 1
-    path: Assets/Scenes/Credits.unity
+    path: Assets/Scenes/Non_GameScene/Credits.unity
     guid: 30d06d7832ab4104b8c303f563e4b11e
   - enabled: 1
-    path: Assets/Scenes/Options.unity
+    path: Assets/Scenes/Non_GameScene/Options.unity
     guid: 1345804c64ad09044b7cb810602acea1
   m_configObjects:
     com.unity.dt.app-ui: {fileID: 11400000, guid: 1b1c20d82303e4b5781c3ef50ac1449f, type: 2}
