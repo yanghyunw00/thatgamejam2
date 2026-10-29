@@ -3,79 +3,78 @@ using UnityEngine.InputSystem;
 
 public class GolfBall : MonoBehaviour
 {
-    enum State { Aiming, Power, Moving }
+    enum State { Aiming, Moving }
 
-    [Header("Aim")]
-    [SerializeField] float minAngle = 0f;
-    [SerializeField] float maxAngle = 80f;
-    [SerializeField] float angleSpeed = 90f;
-    [SerializeField] float arrowLength = 1.5f;
+    [Header("Hit")]
+    [SerializeField] float pointerRadius = 0.1f;
+    [SerializeField] float minHitSpeed = 3f;
+    [SerializeField] float fullPowerMouseSpeed = 30f;
+    [SerializeField] float powerCurve = 1.6f;
+    [SerializeField] float minLaunchSpeed = 4f;
+    [SerializeField] float maxLaunchSpeed = 40f;
+    [SerializeField] float velocitySmoothing = 30f;
 
-    [Header("Power")]
-    [SerializeField] float powerSpeed = 1.2f;
-    [SerializeField] float maxLaunchSpeed = 20f;
+    [Header("Gravity")]
+    [SerializeField] float flightGravityScale = 3f;
+
+    [Header("Damping")]
+    [SerializeField] float linearDamping = 0.3f;
+    [SerializeField] float angularDamping = 3f;
+    [SerializeField] float slowSpeed = 2f;
+    [SerializeField] float slowLinearDamping = 4f;
 
     [Header("Stop")]
-    [SerializeField] float stopSepeed = 0.15f;
-    [SerializeField] float stopTime = 0.6f;
+    [SerializeField] float settleSpeed = 0.8f;
+    [SerializeField] float settleTime = 0.25f;
+
+    public int Strokes => strokes;
+    public bool CanHit => state == State.Aiming;
 
     Rigidbody2D rb;
-    LineRenderer arrow;
+    float ballRadius = 0.25f;
 
     State state = State.Aiming;
 
-    float aimTime;
-    float powerTime;
-    float angle;
-    float power;
     float stillTimer;
+    int strokes;
     Vector2 startPos;
+
+    Vector2 prevMouseWorld;
+    Vector2 mouseVelocity;
+    bool hasPrevMouse;
 
     void Awake()
     {
         rb = GetComponent<Rigidbody2D>();
         rb.gravityScale = 0f;
 
-        arrow = gameObject.AddComponent<LineRenderer>();
-        arrow.positionCount = 2;
-        arrow.startWidth = arrow.endWidth = 0.08f;
-        arrow.material = new Material(Shader.Find("Sprites/Default"));
-        arrow.startColor = arrow.endColor = Color.yellow;
+        var circle = GetComponent<CircleCollider2D>();
+        if (circle != null)
+            ballRadius = circle.radius * Mathf.Max(transform.lossyScale.x, transform.lossyScale.y);
 
         startPos = rb.position;
     }
 
     void Update()
     {
-        if (Keyboard.current == null) return;
-        bool pressed = Keyboard.current.spaceKey.wasPressedThisFrame;
-
-        if(Keyboard.current.rKey.wasPressedThisFrame)
+        if (Keyboard.current != null && Keyboard.current.rKey.wasPressedThisFrame)
         {
             rb.position = startPos;
+            strokes = 0;
             BeginAim();
             return;
         }
 
         if (state == State.Aiming)
         {
-            aimTime += Time.deltaTime * angleSpeed;
-            angle = Mathf.Lerp(minAngle, maxAngle, Mathf.PingPong(aimTime / (maxAngle - minAngle), 1f));
-            DrawArrow(arrowLength);
-
-            if (pressed) state = State.Power;
+            TryHit();
         }
-        else if (state == State.Power)
+        else if (state == State.Moving)
         {
-            powerTime += Time.deltaTime * powerSpeed;
-            power = Mathf.PingPong(powerTime, 1f);
-            DrawArrow(arrowLength * Mathf.Max(0.2f, power));
+            rb.linearDamping = rb.linearVelocity.magnitude < slowSpeed ? slowLinearDamping : linearDamping;
 
-            if (pressed) Launch();
-        }
-        else if(state == State.Moving)
-        {
-            if(rb.linearVelocity.magnitude < stopSepeed)
+            bool grounded = rb.IsTouchingLayers();
+            if (grounded && rb.linearVelocity.magnitude < settleSpeed)
             {
                 stillTimer += Time.deltaTime;
             }
@@ -83,51 +82,73 @@ public class GolfBall : MonoBehaviour
             {
                 stillTimer = 0;
             }
-            if(stillTimer >= stopTime)
+            if (stillTimer >= settleTime)
             {
                 BeginAim();
             }
         }
     }
 
-    void DrawArrow(float length)
+    void TryHit()
     {
-        Vector2 dir = new Vector2(Mathf.Cos(angle * Mathf.Deg2Rad), Mathf.Sin(angle * Mathf.Deg2Rad));
-        Vector2 pos = transform.position;
-        arrow.SetPosition(0, pos);
-        arrow.SetPosition(1, pos + dir * length);
+        Mouse mouse = Mouse.current;
+        if (mouse == null || Camera.main == null) return;
+
+        Vector2 mouseWorld = Camera.main.ScreenToWorldPoint(mouse.position.ReadValue());
+
+        if (!hasPrevMouse)
+        {
+            prevMouseWorld = mouseWorld;
+            mouseVelocity = Vector2.zero;
+            hasPrevMouse = true;
+            return;
+        }
+
+        float dt = Time.deltaTime;
+        if (dt <= 0f) return;
+
+        Vector2 rawVelocity = (mouseWorld - prevMouseWorld) / dt;
+        mouseVelocity = Vector2.Lerp(mouseVelocity, rawVelocity, 1f - Mathf.Exp(-velocitySmoothing * dt));
+
+        float dist = DistanceToSegment(rb.position, prevMouseWorld, mouseWorld);
+        bool touching = dist <= ballRadius + pointerRadius;
+        float speed = mouseVelocity.magnitude;
+
+        if (touching && speed >= minHitSpeed)
+        {
+            float t = Mathf.Pow(Mathf.Clamp01(speed / fullPowerMouseSpeed), powerCurve);
+            Launch(mouseVelocity.normalized, Mathf.Lerp(minLaunchSpeed, maxLaunchSpeed, t));
+        }
+
+        prevMouseWorld = mouseWorld;
     }
 
+    static float DistanceToSegment(Vector2 p, Vector2 a, Vector2 b)
+    {
+        Vector2 ab = b - a;
+        float lenSq = ab.sqrMagnitude;
+        if (lenSq < 1e-8f) return Vector2.Distance(p, a);
+        float t = Mathf.Clamp01(Vector2.Dot(p - a, ab) / lenSq);
+        return Vector2.Distance(p, a + ab * t);
+    }
 
     void BeginAim()
     {
         state = State.Aiming;
-        aimTime = 0f;
-        powerTime = 0f;
-        power = 0f;
         stillTimer = 0f;
+        hasPrevMouse = false;
         rb.linearVelocity = Vector2.zero;
         rb.angularVelocity = 0f;
         rb.gravityScale = 0f;
-        arrow.enabled = true;
     }
 
-    void Launch()
+    void Launch(Vector2 dir, float speed)
     {
         state = State.Moving;
-        arrow.enabled = false;
-        rb.gravityScale = 1f;
-
-        Vector2 dir = new Vector2(Mathf.Cos(angle * Mathf.Deg2Rad), Mathf.Sin(angle * Mathf.Deg2Rad));
-        rb.linearVelocity = dir * (power * maxLaunchSpeed);
-    }
-
-    void OnGUI()
-    {
-        if (state == State.Moving) return;
-
-        Rect box = new Rect(Screen.width / 2f - 100f, Screen.height - 50f, 200f, 20f);
-        GUI.Box(box, GUIContent.none);
-        GUI.DrawTexture(new Rect(box.x, box.y, box.width * power, box.height), Texture2D.whiteTexture);
+        strokes++;
+        rb.gravityScale = flightGravityScale;
+        rb.linearDamping = linearDamping;
+        rb.angularDamping = angularDamping;
+        rb.linearVelocity = dir * speed;
     }
 }
