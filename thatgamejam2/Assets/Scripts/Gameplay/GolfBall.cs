@@ -1,3 +1,4 @@
+using System;
 using UnityEngine;
 using UnityEngine.InputSystem;
 
@@ -29,6 +30,8 @@ public class GolfBall : MonoBehaviour
 
     public int Strokes => strokes;
     public bool CanHit => state == State.Aiming;
+    public event Action<float> ShotLaunched;
+    public event Action<float> Impacted;
 
     Rigidbody2D rb;
     float ballRadius = 0.25f;
@@ -57,6 +60,13 @@ public class GolfBall : MonoBehaviour
 
     void Update()
     {
+        if (GameCameraController.IsIntroActive)
+        {
+            hasPrevMouse = false;
+            mouseVelocity = Vector2.zero;
+            return;
+        }
+
         if (Keyboard.current != null && Keyboard.current.rKey.wasPressedThisFrame)
         {
             rb.position = startPos;
@@ -150,5 +160,11 @@ public class GolfBall : MonoBehaviour
         rb.linearDamping = linearDamping;
         rb.angularDamping = angularDamping;
         rb.linearVelocity = dir * speed;
+        ShotLaunched?.Invoke(speed);
+    }
+
+    void OnCollisionEnter2D(Collision2D collision)
+    {
+        Impacted?.Invoke(collision.relativeVelocity.magnitude);
     }
 }

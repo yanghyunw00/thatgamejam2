@@ -1,0 +1,827 @@
+fileFormatVersion: 2
+guid: 3ba3b50eae3237e41a7384c04b2b3e02
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: -1517917953669325933
+    second: Foozle_2DT0008_GreenValley_Tileset_Pixel_Art_0
+  - first:
+      213: -2193749881590392852
+    second: Foozle_2DT0008_GreenValley_Tileset_Pixel_Art_1
+  - first:
+      213: 6147643815557584081
+    second: Foozle_2DT0008_GreenValley_Tileset_Pixel_Art_2
+  - first:
+      213: 238251388378064035
+    second: Foozle_2DT0008_GreenValley_Tileset_Pixel_Art_3
+  - first:
+      213: 6113469493825018020
+    second: Foozle_2DT0008_GreenValley_Tileset_Pixel_Art_4
+  - first:
+      213: -2112846723095678200
+    second: Foozle_2DT0008_GreenValley_Tileset_Pixel_Art_5
+  - first:
+      213: 8692730360229912544
+    second: Foozle_2DT0008_GreenValley_Tileset_Pixel_Art_6
+  - first:
+      213: -6217093979933858385
+    second: Foozle_2DT0008_GreenValley_Tileset_Pixel_Art_7
+  - first:
+      213: -8911204058145483803
+    second: Foozle_2DT0008_GreenValley_Tileset_Pixel_Art_8
+  - first:
+      213: 6273469203801957995
+    second: Foozle_2DT0008_GreenValley_Tileset_Pixel_Art_9
+  - first:
+      213: 8967427438580507828
+    second: Foozle_2DT0008_GreenValley_Tileset_Pixel_Art_10
+  - first:
+      213: 5511243860102403413
+    second: Foozle_2DT0008_GreenValley_Tileset_Pixel_Art_11
+  - first:
+      213: 7087627997539553424
+    second: Foozle_2DT0008_GreenValley_Tileset_Pixel_Art_12
+  - first:
+      213: -1826842564741912581
+    second: Foozle_2DT0008_GreenValley_Tileset_Pixel_Art_13
+  - first:
+      213: -3006349216957101491
+    second: Foozle_2DT0008_GreenValley_Tileset_Pixel_Art_14
+  - first:
+      213: 1670029435709081921
+    second: Foozle_2DT0008_GreenValley_Tileset_Pixel_Art_15
+  - first:
+      213: 2936081131640677176
+    second: Foozle_2DT0008_GreenValley_Tileset_Pixel_Art_16
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 0
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 16
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 4
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: WebGL
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: Foozle_2DT0008_GreenValley_Tileset_Pixel_Art_3
+      rect:
+        serializedVersion: 2
+        x: 48
+        y: 48
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3a4a48b10607e4300800000000000000
+      internalID: 238251388378064035
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Foozle_2DT0008_GreenValley_Tileset_Pixel_Art_6
+      rect:
+        serializedVersion: 2
+        x: 96
+        y: 48
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0efd1c1e438c2a870800000000000000
+      internalID: 8692730360229912544
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Foozle_2DT0008_GreenValley_Tileset_Pixel_Art_7
+      rect:
+        serializedVersion: 2
+        x: 112
+        y: 48
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: fa5a2def6f178b9a0800000000000000
+      internalID: -6217093979933858385
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Foozle_2DT0008_GreenValley_Tileset_Pixel_Art_11
+      rect:
+        serializedVersion: 2
+        x: 192
+        y: 48
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 555d4f7471fdb7c40800000000000000
+      internalID: 5511243860102403413
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Foozle_2DT0008_GreenValley_Tileset_Pixel_Art_12
+      rect:
+        serializedVersion: 2
+        x: 208
+        y: 48
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0905575ac105c5260800000000000000
+      internalID: 7087627997539553424
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Foozle_2DT0008_GreenValley_Tileset_Pixel_Art_25
+      rect:
+        serializedVersion: 2
+        x: 64
+        y: 32
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1e5e6e5d366c6554090b1243d85eb625
+      internalID: -837151261
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Foozle_2DT0008_GreenValley_Tileset_Pixel_Art_27
+      rect:
+        serializedVersion: 2
+        x: 96
+        y: 32
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6c3a701159a6c1847905ab448b93015c
+      internalID: -341819504
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Foozle_2DT0008_GreenValley_Tileset_Pixel_Art_28
+      rect:
+        serializedVersion: 2
+        x: 112
+        y: 32
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0275d6fd9da0d3b41a9dfb265815d980
+      internalID: 1901680561
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Foozle_2DT0008_GreenValley_Tileset_Pixel_Art_32
+      rect:
+        serializedVersion: 2
+        x: 192
+        y: 32
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d9f7bed786c1cee4b881a95976897813
+      internalID: 380671929
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Foozle_2DT0008_GreenValley_Tileset_Pixel_Art_33
+      rect:
+        serializedVersion: 2
+        x: 208
+        y: 32
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8e50a30ce19899a4f8f4d766203b1eb8
+      internalID: -512689249
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Foozle_2DT0008_GreenValley_Tileset_Pixel_Art_34
+      rect:
+        serializedVersion: 2
+        x: 236
+        y: 32
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 80b193739689cd74fb2b12cb64ba0e00
+      internalID: -333151028
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Foozle_2DT0008_GreenValley_Tileset_Pixel_Art_36
+      rect:
+        serializedVersion: 2
+        x: 265
+        y: 32
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7e1039c69c31f9440b9a1974ed1dab2c
+      internalID: 1293498476
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Foozle_2DT0008_GreenValley_Tileset_Pixel_Art_39
+      rect:
+        serializedVersion: 2
+        x: 298
+        y: 32
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f00bcd62d27235a4bb039d1ec16f115d
+      internalID: -49577515
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Foozle_2DT0008_GreenValley_Tileset_Pixel_Art_40
+      rect:
+        serializedVersion: 2
+        x: 320
+        y: 32
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b806a3c5f7a1aff48a91d40b7383a478
+      internalID: -1570502769
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Foozle_2DT0008_GreenValley_Tileset_Pixel_Art_42
+      rect:
+        serializedVersion: 2
+        x: 352
+        y: 32
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 94f40eb6cedac2042b3b0266ecc5fe68
+      internalID: -401252475
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Foozle_2DT0008_GreenValley_Tileset_Pixel_Art_44
+      rect:
+        serializedVersion: 2
+        x: 384
+        y: 32
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c03b6a52ae272404f9e00dac6092b4de
+      internalID: 2038537323
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Foozle_2DT0008_GreenValley_Tileset_Pixel_Art_46
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 16
+        width: 48
+        height: 48
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d4822f39ffa142542be244ee810b8c8b
+      internalID: -919302364
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Foozle_2DT0008_GreenValley_Tileset_Pixel_Art_55
+      rect:
+        serializedVersion: 2
+        x: 192
+        y: 16
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6302821c69b74c84c92755d1e1fab564
+      internalID: 57902746
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Foozle_2DT0008_GreenValley_Tileset_Pixel_Art_56
+      rect:
+        serializedVersion: 2
+        x: 208
+        y: 16
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5401718ecc165134bbb59b99e305ddb4
+      internalID: -1586801900
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Foozle_2DT0008_GreenValley_Tileset_Pixel_Art_57
+      rect:
+        serializedVersion: 2
+        x: 232
+        y: 14
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bad9a8f286721da40aeada173a9c3a77
+      internalID: -1717581988
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Foozle_2DT0008_GreenValley_Tileset_Pixel_Art_59
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 0
+        width: 48
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c356a8a05a3aeb446b1067a00a085acb
+      internalID: 1322885735
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Foozle_2DT0008_GreenValley_Tileset_Pixel_Art_62
+      rect:
+        serializedVersion: 2
+        x: 48
+        y: 0
+        width: 16
+        height: 48
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e1fca535b445b454292a3d6e5b59fbc4
+      internalID: -1338990838
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Foozle_2DT0008_GreenValley_Tileset_Pixel_Art_63
+      rect:
+        serializedVersion: 2
+        x: 64
+        y: 0
+        width: 64
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7ce6f57aa2f8d0642a03d08fff6ad72c
+      internalID: -1135606228
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Foozle_2DT0008_GreenValley_Tileset_Pixel_Art_67
+      rect:
+        serializedVersion: 2
+        x: 128
+        y: 0
+        width: 48
+        height: 64
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c79b4b8e3672b6a4eb07ca8316f0923e
+      internalID: 1502803288
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Foozle_2DT0008_GreenValley_Tileset_Pixel_Art_70
+      rect:
+        serializedVersion: 2
+        x: 192
+        y: 0
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 31330bffdad7b4e47911dac5ec4308ee
+      internalID: -962045809
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Foozle_2DT0008_GreenValley_Tileset_Pixel_Art_71
+      rect:
+        serializedVersion: 2
+        x: 208
+        y: 0
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ae2bcced563bc634fb7368047f878eb7
+      internalID: -1593903005
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    customData: 
+    physicsShape: []
+    bones: []
+    spriteID: 7737d539bc4823d4d8a8d95dcd4542a9
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    spriteCustomMetadata:
+      entries:
+      - key: SpriteEditor.SliceSettings
+        value: '{"sliceOnImport":false,"gridCellCount":{"x":1.0,"y":1.0},"gridSpriteSize":{"x":16.0,"y":16.0},"gridSpriteOffset":{"x":0.0,"y":0.0},"gridSpritePadding":{"x":0.0,"y":0.0},"pivot":{"x":0.5,"y":0.5},"pivotPixels":{"x":0.0,"y":0.0},"autoSlicingMethod":0,"spriteAlignment":0,"pivotUnitMode":0,"slicingType":1,"keepEmptyRects":false,"isAlternate":false}'
+    nameFileIdTable:
+      Foozle_2DT0008_GreenValley_Tileset_Pixel_Art_0: -1517917953669325933
+      Foozle_2DT0008_GreenValley_Tileset_Pixel_Art_1: -2193749881590392852
+      Foozle_2DT0008_GreenValley_Tileset_Pixel_Art_10: 8967427438580507828
+      Foozle_2DT0008_GreenValley_Tileset_Pixel_Art_11: 5511243860102403413
+      Foozle_2DT0008_GreenValley_Tileset_Pixel_Art_12: 7087627997539553424
+      Foozle_2DT0008_GreenValley_Tileset_Pixel_Art_13: -1826842564741912581
+      Foozle_2DT0008_GreenValley_Tileset_Pixel_Art_14: -3006349216957101491
+      Foozle_2DT0008_GreenValley_Tileset_Pixel_Art_15: 1670029435709081921
+      Foozle_2DT0008_GreenValley_Tileset_Pixel_Art_16: 2936081131640677176
+      Foozle_2DT0008_GreenValley_Tileset_Pixel_Art_17: 158144946
+      Foozle_2DT0008_GreenValley_Tileset_Pixel_Art_18: -1692207735
+      Foozle_2DT0008_GreenValley_Tileset_Pixel_Art_19: -1736164911
+      Foozle_2DT0008_GreenValley_Tileset_Pixel_Art_2: 6147643815557584081
+      Foozle_2DT0008_GreenValley_Tileset_Pixel_Art_20: 512736026
+      Foozle_2DT0008_GreenValley_Tileset_Pixel_Art_21: -451222778
+      Foozle_2DT0008_GreenValley_Tileset_Pixel_Art_22: -1403211978
+      Foozle_2DT0008_GreenValley_Tileset_Pixel_Art_23: 1197467401
+      Foozle_2DT0008_GreenValley_Tileset_Pixel_Art_24: 335747375
+      Foozle_2DT0008_GreenValley_Tileset_Pixel_Art_25: -837151261
+      Foozle_2DT0008_GreenValley_Tileset_Pixel_Art_26: -31573345
+      Foozle_2DT0008_GreenValley_Tileset_Pixel_Art_27: -341819504
+      Foozle_2DT0008_GreenValley_Tileset_Pixel_Art_28: 1901680561
+      Foozle_2DT0008_GreenValley_Tileset_Pixel_Art_29: -991250229
+      Foozle_2DT0008_GreenValley_Tileset_Pixel_Art_3: 238251388378064035
+      Foozle_2DT0008_GreenValley_Tileset_Pixel_Art_30: -536996947
+      Foozle_2DT0008_GreenValley_Tileset_Pixel_Art_31: -721195779
+      Foozle_2DT0008_GreenValley_Tileset_Pixel_Art_32: 380671929
+      Foozle_2DT0008_GreenValley_Tileset_Pixel_Art_33: -512689249
+      Foozle_2DT0008_GreenValley_Tileset_Pixel_Art_34: -333151028
+      Foozle_2DT0008_GreenValley_Tileset_Pixel_Art_35: 114556272
+      Foozle_2DT0008_GreenValley_Tileset_Pixel_Art_36: 1293498476
+      Foozle_2DT0008_GreenValley_Tileset_Pixel_Art_37: -539639218
+      Foozle_2DT0008_GreenValley_Tileset_Pixel_Art_38: -1796018762
+      Foozle_2DT0008_GreenValley_Tileset_Pixel_Art_39: -49577515
+      Foozle_2DT0008_GreenValley_Tileset_Pixel_Art_4: 6113469493825018020
+      Foozle_2DT0008_GreenValley_Tileset_Pixel_Art_40: -1570502769
+      Foozle_2DT0008_GreenValley_Tileset_Pixel_Art_41: -1668116135
+      Foozle_2DT0008_GreenValley_Tileset_Pixel_Art_42: -401252475
+      Foozle_2DT0008_GreenValley_Tileset_Pixel_Art_43: 1753872557
+      Foozle_2DT0008_GreenValley_Tileset_Pixel_Art_44: 2038537323
+      Foozle_2DT0008_GreenValley_Tileset_Pixel_Art_45: -865734225
+      Foozle_2DT0008_GreenValley_Tileset_Pixel_Art_46: -919302364
+      Foozle_2DT0008_GreenValley_Tileset_Pixel_Art_47: 163038602
+      Foozle_2DT0008_GreenValley_Tileset_Pixel_Art_48: -1176700274
+      Foozle_2DT0008_GreenValley_Tileset_Pixel_Art_49: 563011262
+      Foozle_2DT0008_GreenValley_Tileset_Pixel_Art_5: -2112846723095678200
+      Foozle_2DT0008_GreenValley_Tileset_Pixel_Art_50: 1480796133
+      Foozle_2DT0008_GreenValley_Tileset_Pixel_Art_51: 24708344
+      Foozle_2DT0008_GreenValley_Tileset_Pixel_Art_52: 2141945461
+      Foozle_2DT0008_GreenValley_Tileset_Pixel_Art_53: 1933709684
+      Foozle_2DT0008_GreenValley_Tileset_Pixel_Art_54: 1000896149
+      Foozle_2DT0008_GreenValley_Tileset_Pixel_Art_55: 57902746
+      Foozle_2DT0008_GreenValley_Tileset_Pixel_Art_56: -1586801900
+      Foozle_2DT0008_GreenValley_Tileset_Pixel_Art_57: -1717581988
+      Foozle_2DT0008_GreenValley_Tileset_Pixel_Art_58: 1706367945
+      Foozle_2DT0008_GreenValley_Tileset_Pixel_Art_59: 1322885735
+      Foozle_2DT0008_GreenValley_Tileset_Pixel_Art_6: 8692730360229912544
+      Foozle_2DT0008_GreenValley_Tileset_Pixel_Art_60: -1482644385
+      Foozle_2DT0008_GreenValley_Tileset_Pixel_Art_61: -236574858
+      Foozle_2DT0008_GreenValley_Tileset_Pixel_Art_62: -1338990838
+      Foozle_2DT0008_GreenValley_Tileset_Pixel_Art_63: -1135606228
+      Foozle_2DT0008_GreenValley_Tileset_Pixel_Art_64: 609073377
+      Foozle_2DT0008_GreenValley_Tileset_Pixel_Art_65: 499185219
+      Foozle_2DT0008_GreenValley_Tileset_Pixel_Art_66: -520360783
+      Foozle_2DT0008_GreenValley_Tileset_Pixel_Art_67: 1502803288
+      Foozle_2DT0008_GreenValley_Tileset_Pixel_Art_68: 1509629348
+      Foozle_2DT0008_GreenValley_Tileset_Pixel_Art_69: 1915065467
+      Foozle_2DT0008_GreenValley_Tileset_Pixel_Art_7: -6217093979933858385
+      Foozle_2DT0008_GreenValley_Tileset_Pixel_Art_70: -962045809
+      Foozle_2DT0008_GreenValley_Tileset_Pixel_Art_71: -1593903005
+      Foozle_2DT0008_GreenValley_Tileset_Pixel_Art_8: -8911204058145483803
+      Foozle_2DT0008_GreenValley_Tileset_Pixel_Art_9: 6273469203801957995
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
